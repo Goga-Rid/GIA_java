@@ -10,7 +10,6 @@ import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Date;
 
 public class HelloController {
     @FXML
@@ -59,7 +58,7 @@ public class HelloController {
                     try {
                         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
                         SecondController secondController = fxmlLoader.getController();
-                        secondController.setData(rowData);
+                        secondController.updateData(rowData, vPartner);
                         stage.setTitle("Добавление/Редактирование данных партнера");
                         stage.setScene(scene);
                         stage.show();
